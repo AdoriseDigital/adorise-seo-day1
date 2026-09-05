@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adorisedigital.github.io/adorise-seo-day1/sitemap.json
