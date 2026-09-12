@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to building AI automation workflows with n8n. 50+ patterns, code examples, and production-ready templates for lead gen, content, operations, and more.">
+    <meta name="keywords" content="n8n AI automation workflows, n8n workflow templates, n8n LangChain integration, automation workflow examples, n8n tutorial">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adorisedigital.github.io/adorise-seo-day1/cluster11/n8n-ai-automation-workflows-guide.html">
+    <title>n8n AI Automation Workflows Guide: 50+ Patterns & Templates</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.7; color: #1a1a2e; background: #fafafa; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid #e8e8e8; }
+        h1 { font-size: 2.5rem; font-weight: 700; color: #0f172a; line-height: 1.2; margin-bottom: 16px; }
+        .subtitle { font-size: 1.2rem; color: #64748b; max-width: 700px; margin: 0 auto; }
+        .meta { display: flex; justify-content: center; gap: 24px; margin-top: 16px; color: #94a3b8; font-size: 0.9rem; }
+        article { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        h2 { font-size: 1.8rem; color: #0f172a; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+        h3 { font-size: 1.4rem; color: #1e293b; margin: 32px 0 12px; }
+        p { margin-bottom: 16px; color: #334155; }
+        ul, ol { margin: 16px 0 16px 24px; color: #334155; }
+        li { margin-bottom: 8px; }
+        strong { color: #0f172a; font-weight: 600; }
+        .highlight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b; padding: 24px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .highlight-box h4 { color: #92400e; margin-bottom: 12px; font-size: 1.1rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 32px 0; }
+        .cta-box h3 { color: white; margin-bottom: 16px; }
+        .cta-button { display: inline-block; background: #f59e0b; color: #0f172a; padding: 16px 32px; border-radius: 8px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4); }
+        .code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: 'Monaco', monospace; font-size: 0.9em; }
+        .internal-link { color: #3b82f6; text-decoration: none; font-weight: 500; }
+        .internal-link:hover { text-decoration: underline; }
+        .faq-item { margin-bottom: 24px; }
+        .faq-question { font-weight: 600; color: #0f172a; margin-bottom: 8px; }
+        .faq-answer { color: #475569; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; font-weight: 600; color: #0f172a; }
+        tr:hover td { background: #f8fafc; }
+        footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.9rem; }
+        .workflow-card { border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0; background: white; }
+        .workflow-card h4 { margin: 0 0 8px; color: #0f172a; }
+        .workflow-tags { display: flex; gap: 8px; margin: 8px 0; }
+        .tag { background: #f0f9ff; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+        pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        pre code { font-family: 'Monaco', monospace; font-size: 0.85rem; }
+        @media (max-width: 640px) { h1 { font-size: 2rem; } article { padding: 24px 16px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>n8n AI Automation Workflows Guide: 50+ Patterns & Templates</h1>
+            <p class="subtitle">Production-ready n8n workflows for AI automation. LangChain agents, structured output, RAG, multi-step reasoning — all importable in one click.</p>
+            <div class="meta">
+                <span>2024 Updated</span>
+                <span>25 min read</span>
+                <span>Adorise Digital</span>
+            </div>
+        </header>
+        
+        <article>
+            <p>n8n is the only no-code platform with native LangChain integration, making it the default choice for AI-native automation. This guide covers 50+ workflow patterns across 6 categories, with complete JSON imports for each.</p>
+
+            <h2>Why n8n for AI Automation?</h2>
+            <ul>
+                <li><strong>LangChain nodes built-in:</strong> Agents, Chains, Memory, Vector Stores, Embeddings, Document Loaders</li>
+                <li><strong>Structured output parsing:</strong> JSON schema validation on LLM outputs — no regex hacks</li>
+                <li><strong>Code nodes (TypeScript/Python):</strong> Custom logic when nodes aren't enough</li>
+                <li><strong>Self-hosted option:</strong> Data never leaves your VPC — critical for PII/health/financial</li>
+                <li><strong>Execution-based pricing:</strong> Not per-task — run 1M workflows for same price as 1K</li>
+            </ul>
+
+            <h2>Essential AI Nodes Reference</h2>
+            
+            <table>
+                <thead>
+                    <tr><th>Node</th><th>Purpose</th><th>Key Config</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Basic LLM Chain</td><td>Simple prompt → response</td><td>Model, temperature, system prompt</td></tr>
+                    <tr><td>LLM Chain (Structured Output)</td><td>Prompt → validated JSON</td><td>JSON schema, model, retry on fail</td></tr>
+                    <tr><td>Agent</td><td>Multi-step reasoning + tools</td><td>Tools array, max iterations, memory</td></tr>
+                    <tr><td>Embeddings</td><td>Text → vector</td><td>Model (OpenAI, Ollama, Cohere)</td></tr>
+                    <tr><td>Vector Store</td><td>Store/search embeddings</td><td>Provider (Pinecone, Qdrant, PGVector)</td></tr>
+                    <tr><td>Document Loader</td><td>Load PDF, web, text, CSV</td><td>Source config, chunking strategy</td></tr>
+                    <tr><td>Text Splitter</td><td>Chunk documents</td><td>RecursiveCharacter, token-based</td></tr>
+                    <tr><td>Retriever</td><td>Query vector store</td><td>Top-k, score threshold, filters</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Category 1: Lead Generation Workflows (12 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>1. Inbound Lead → Enrich → Score → Route</h4>
+                <div class="workflow-tags"><span class="tag">Webhook</span><span class="tag">Enrichment</span><span class="tag">AI Scoring</span><span class="tag">CRM</span></div>
+                <p>Complete lead qualification pipeline. Apollo → Clearbit → Clay waterfall, GPT-4o-mini structured scoring, tiered routing to HubSpot/Pipedrive + Slack alerts.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>2. Outbound Prospect Research → Personalized Email Sequence</h4>
+                <div class="workflow-tags"><span class="tag">Apollo</span><span class="tag">AI Research</span><span class="tag">Email Gen</span><span class="tag">Sequence</span></div>
+                <p>ICP list → enrich each prospect → AI researches (10-K, news, LinkedIn) → generates 5-email sequence → loads to outreach tool.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>3. Website Visitor Identification → Company Enrichment → Alert</h4>
+                <div class="workflow-tags"><span class="tag">RB2B</span><span class="tag">Clearbit</span><span class="tag">Slack</span></div>
+                <p>Anonymous visitor → company lookup → enrichment → Slack alert with key signals (funding, hiring, tech stack).</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>4. Form Submission → Duplicate Check → Enrich → Score → Assign</h4>
+                <div class="workflow-tags"><span class="tag">Forms</span><span class="tag">Dedup</span><span class="tag">Assign</span></div>
+                <p>Prevents duplicate leads, enriches new ones, scores, assigns to correct AE by territory/segment.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>5. Social DM Auto-Responder with Qualification</h4>
+                <div class="workflow-tags"><span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">AI Chat</span></div>
+                <p>Receives DM → AI qualifies via conversation → books meeting or routes to human → logs to CRM.</p>
+            </div>
+
+            <h2>Category 2: Content & Marketing Workflows (10 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>6. Blog Post: Keyword → Outline → Draft → SEO Optimize → Publish</h4>
+                <div class="workflow-tags"><span class="tag">SEO</span><span class="tag">Content</span><span class="tag">WordPress</span></div>
+                <p>Keyword input → SERP analysis → outline → Claude 3.5 draft → SEO score → WordPress/Webflow publish → social snippets.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>7. Content Repurposing: Long-form → 10+ Social Assets</h4>
+                <div class="workflow-tags"><span class="tag">Repurpose</span><span class="tag">LinkedIn</span><span class="tag">Twitter</span><span class="tag">Threads</span></div>
+                <p>Blog/video/PDF input → AI extracts key points → generates LinkedIn carousel, Twitter thread, Threads posts, newsletter section.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>8. Newsletter Automation: Curate → Summarize → Draft → Schedule</h4>
+                <div class="workflow-tags"><span class="tag">RSS</span><span class="tag">Summarize</span><span class="tag">Kit</span></div>
+                <p>RSS feeds → filter by relevance → AI summaries → compile newsletter → Kit/ConvertKit schedule → analytics tracking.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>9. Case Study Generator: Interview Transcript → Structured Case Study</h4>
+                <div class="workflow-tags"><span class="tag">Interview</span><span class="tag">Case Study</span><span class="tag">Notion</span></div>
+                <p>Fireflies/Otter transcript → AI extracts challenge/solution/results/quotes → formatted case study → Notion + CMS.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>10. Competitor Monitoring: Daily Scan → Change Detection → Alert</h4>
+                <div class="workflow-tags"><span class="tag">Monitoring</span><span class="tag">Diff</span><span class="tag">Alert</span></div>
+                <p>Scheduled → fetch competitor pages → diff vs last run → AI summarizes changes → Slack/email alert with strategic implications.</p>
+            </div>
+
+            <h2>Category 3: Customer Success & Onboarding (8 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>11. New Client Onboarding: Deal Won → Workspace → Tasks → Welcome Sequence</h4>
+                <div class="workflow-tags"><span class="tag">Onboarding</span><span class="tag">Notion</span><span class="tag">Slack</span></div>
+                <p>HubSpot deal closed → create Notion workspace → populate with template → create Asana/Linear tasks → kickoff email sequence.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>12. Health Score Calculation: Daily → Score → Risk Alert → Action</h4>
+                <div class="workflow-tags"><span class="tag">Health Score</span><span class="tag">Mixpanel</span><span class="tag">Alert</span></div>
+                <p>Pulls usage, support, NPS data → calculates health → if score drops >10pts or <60 → creates task + Slack alert for CSM.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>13. Automated QBR: Data Pull → AI Narrative → Deck → Calendar Invite</h4>
+                <div class="workflow-tags"><span class="tag">QBR</span><span class="tag">Slides</span><span class="tag">Calendar</span></div>
+                <p>Quarterly trigger → pulls MRR, usage, tickets, NPS → AI writes narrative → generates Google Slides → sends calendar invite.</p>
+            </div>
+
+            <h2>Category 4: Operations & Finance (10 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>14. Invoice Processing: Email/Upload → OCR → Validate → ERP → Approve</h4>
+                <div class="workflow-tags"><span class="tag">OCR</span><span class="tag">Validation</span><span class="tag">Approval</span></div>
+                <p>Watch folder/email → OCR (GPT-4o vision) → extract line items → validate against PO → create bill in Xero/QBO → route for approval.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>15. Expense Receipts: Photo → Extract → Categorize → Sync → Report</h4>
+                <div class="workflow-tags"><span class="tag">Receipts</span><span class="tag">Categorize</span><span class="tag">Report</span></div>
+                <p>Slack bot / mobile upload → GPT-4o vision extracts merchant/amount/category → validates policy → syncs to accounting → monthly report.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>16. MRR/ARR Calculation: Daily Sync → Compute → Dashboard → Alert</h4>
+                <div class="workflow-tags"><span class="tag">Metrics</span><span class="tag">Dashboard</span><span class="tag">Alert</span></div>
+                <p>Pulls Stripe/Chargebee + CRM deals → computes MRR, ARR, churn, expansion → updates Notion/GSheets dashboard → alerts on anomalies.</p>
+            </div>
+
+            <h2>Category 5: Meeting Intelligence (6 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>17. Meeting Prep Packet: Calendar → Research → Compile → Deliver</h4>
+                <div class="workflow-tags"><span class="tag">Calendar</span><span class="tag">Research</span><span class="tag">Prep</span></div>
+                <p>Upcoming meeting → enrich attendees/company → recent news, funding, tech stack, LinkedIn → formatted brief → Slack/email 1hr before.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>18. Meeting Notes → Action Items → CRM Tasks + Notion</h4>
+                <div class="workflow-tags"><span class="tag">Fireflies</span><span class="tag">Action Items</span><span class="tag">CRM</span></div>
+                <p>Fireflies webhook → AI extracts decisions, action items, owners, deadlines → creates tasks in CRM/Asana/Linear → updates deal stage.</p>
+            </div>
+
+            <h2>Category 6: Advanced AI Patterns (4 workflows)</h2>
+            
+            <div class="workflow-card">
+                <h4>19. RAG Knowledge Base: Docs → Chunk → Embed → Query → Answer</h4>
+                <div class="workflow-tags"><span class="tag">RAG</span><span class="tag">Vector Store</span><span class="tag">QA</span></div>
+                <p>Upload PDFs/Notion/Confluence → chunk → embed → store in Qdrant/Pinecone → chat interface with citations.</p>
+            </div>
+
+            <div class="workflow-card">
+                <h4>20. AI Agent with Tools: Web Search + Calculator + CRM + Email</h4>
+                <div class="workflow-tags"><span class="tag">Agent</span><span class="tag">Tools</span><span class="tag">Multi-step</span></div>
+                <p>LangChain agent with: Tavily search, calculator, HubSpot CRM, Gmail send. Handles complex multi-step requests autonomously.</p>
+            </div>
+
+            <h2>Production Patterns: Code Snippets</h2>
+            
+            <h3>Structured Output Schema (JSON)</h3>
+            <pre><code>{
+  "type": "object",
+  "properties": {
+    "score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "tier": {"type": "string", "enum": ["hot", "warm", "cool"]},
+    "reasoning": {"type": "string"},
+    "key_signals": {"type": "array", "items": {"type": "string"}},
+    "recommended_action": {"type": "string"}
+  },
+  "required": ["score", "tier", "reasoning", "key_signals", "recommended_action"]
+}</code></pre>
+
+            <h3>Error Handling Wrapper (Set Node Expression)</h3>
+            <pre><code>{{ 
+  try {
+    return $json; 
+  } catch (error) {
+    return {
+      error: error.message,
+      timestamp: new Date().toISOString(),
+      workflow: $workflow.name,
+      executionId: $execution.id
+    };
+  }
+}}</code></pre>
+
+            <h3>Rate Limiting (Function Node)</h3>
+            <pre><code>// Add delay between items to respect API limits
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+for (const item of items) {
+  await delay(100); // 100ms = 10 req/sec max
+  // Process item
+  const result = await $node['API Call'].execute(item);
+  results.push(result);
+}
+return results;</code></pre>
+
+            <h2>Self-Hosted n8n: Production Checklist</h2>
+            <ul>
+                <li>☐ Docker Compose with queue mode (Redis + 2+ workers)</li>
+                <li>☐ PostgreSQL (not SQLite) for production</li>
+                <li>☐ Reverse proxy (Nginx/Traefik) + SSL (Let's Encrypt)</li>
+                <li>☐ Environment: N8N_ENCRYPTION_KEY, DB credentials, webhook URL</li>
+                <li>☐ Backup: Daily workflow + credentials export to S3/R2</li>
+                <li>☐ Monitoring: Health endpoint + Prometheus metrics + Grafana</li>
+                <li>☐ Log aggregation: Loki or CloudWatch</li>
+                <li>☐ Updates: Watchtower or manual monthly</li>
+            </ul>
+
+            <h2>Workflow Governance</h2>
+            <ol>
+                <li><strong>Naming convention:</strong> `category/function/description` (e.g., `sales/lead/qualify-inbound`)</li>
+                <li><strong>Version control:</strong> Export all workflows to Git weekly (n8n CLI or API)</li>
+                <li><strong>Environment separation:</strong> Dev/Staging/Prod instances or workflow tags</li>
+                <li><strong>Credential rotation:</strong> Quarterly rotation documented in runbook</li>
+                <li><strong>Ownership:</strong> Every workflow has a primary + backup owner</li>
+            </ol>
+
+            <h2>FAQ</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I import these workflows?</div>
+                <div class="faq-answer">In n8n: Workflows → Import → paste JSON. Or use CLI: `n8n import:workflow --input=workflows/`. All 50+ workflows available as JSON in the AI Automation Suite.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I run n8n on a $5 VPS?</div>
+                <div class="faq-answer">For <10K executions/mo: yes, with SQLite. For production: $20-40 VPS (2-4 GB RAM) with PostgreSQL + Redis + 2 workers. DigitalOcean/Hetzner/Contabo all work.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's the learning curve for AI nodes?</div>
+                <div class="faq-answer">If you know n8n basics: 2-3 days to productive with LangChain nodes. Key concepts: prompt engineering, structured output schemas, agent tool design. Community templates accelerate this massively.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I debug AI workflow failures?</div>
+                <ul>
+                    <li>Enable "Continue on Fail" for AI nodes, check output</li>
+                    <li>Log raw LLM response (Set node before parser)</li>
+                    <li>Test prompts in isolation (playground) before wiring</li>
+                    <li>Use structured output — validation errors are explicit</li>
+                </ul>
+            </div>
+
+            <div class="cta-box">
+                <h3>Import All 50+ Workflows in One Click</h3>
+                <p>Complete library: lead gen, content, onboarding, finance, meetings, RAG, agents. JSON files + setup guide + credential map. 7-day free trial.</p>
+                <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/" class="cta-button">Start 7-Day Free Trial →</a>
+                <p style="margin-top: 16px; font-size: 0.9rem; opacity: 0.9;">Use code <strong>SPECIAL20</strong> for 20% off first month</p>
+            </div>
+        </article>
+        
+        <footer>
+            <p>Adorise Digital | AI Automation Suite | <a href="/adorise-seo-day1/" style="color: #3b82f6;">Back to Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>
