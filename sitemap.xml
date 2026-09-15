@@ -1380,4 +1380,65 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+    <!-- Cluster 24: New SEO Pages (2026-09-15) -->
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/lead-generation-ai-lead-scoring.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/ai-automation-hr-recruiting.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/small-business-ai-financial-forecasting.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/productivity-ai-knowledge-management.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/lead-generation-ai-account-based-marketing.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/ai-automation-legal-compliance.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/small-business-ai-customer-retention.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/productivity-ai-email-management.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/lead-generation-ai-social-selling.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://adorisedigital.github.io/adorise-seo-day1/cluster24/ai-automation-marketing-operations.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 </urlset>

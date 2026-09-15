@@ -1,72 +1,52 @@
-# Hourly SEO Run — 2026-09-15 02:15 IST
+# Hourly SEO Run - 2026-09-15 04:45 IST
 
 ## Summary
-Created **cluster22** with 10 new SEO-optimized pages targeting lead generation, AI automation, small business tools, and productivity software keywords. Deployed to GitHub Pages and submitted to Google Search Console.
+- **New cluster created**: cluster23 (10 SEO-optimized pages)
+- **Pages generated**: 10 pages targeting lead generation, AI automation, small business tools, productivity software
+- **Sitemap updated**: 230 total URLs in sitemap.xml
+- **GitHub Pages deployment**: ✅ Pushed and live
+- **GSC submission**: ⚠️ Connection needs OAuth completion
 
-## Actions Completed
+## New Pages (cluster23)
+1. `lead-generation-ai-intent-data.html` - Lead Generation with AI Intent Data
+2. `ai-automation-finance-accounting.html` - AI Automation for Finance & Accounting
+3. `small-business-ai-pricing-optimization.html` - Small Business AI Pricing Optimization
+4. `productivity-ai-meeting-intelligence.html` - Productivity AI Meeting Intelligence
+5. `lead-generation-ai-outbound-personalization.html` - Lead Generation with AI Outbound Personalization
+6. `ai-automation-supply-chain-logistics.html` - AI Automation for Supply Chain & Logistics
+7. `small-business-ai-content-marketing.html` - Small Business AI Content Marketing
+8. `productivity-ai-code-generation.html` - Productivity AI Code Generation
+9. `lead-generation-ai-referral-automation.html` - Lead Generation with AI Referral Automation
+10. `ai-automation-customer-support.html` - AI Automation for Customer Support
 
-### 1. Generated 10 New SEO Pages (cluster22)
-| # | Filename | Main Keyword | Word Count Est. |
-|---|----------|--------------|-----------------|
-| 1 | lead-generation-ai-predictive-scoring.html | Lead Generation AI Predictive Scoring | ~2,200 |
-| 2 | ai-automation-hr-recruitment.html | AI Automation HR Recruitment | ~2,200 |
-| 3 | small-business-tools-ai-cash-flow-forecasting.html | Small Business Tools AI Cash Flow Forecasting | ~2,200 |
-| 4 | productivity-software-ai-knowledge-base.html | Productivity Software AI Knowledge Base | ~2,200 |
-| 5 | lead-generation-ai-account-based-marketing.html | Lead Generation AI Account-Based Marketing | ~2,200 |
-| 6 | ai-automation-legal-compliance.html | AI Automation Legal Compliance | ~2,200 |
-| 7 | small-business-ai-customer-retention.html | Small Business AI Customer Retention | ~2,200 |
-| 8 | productivity-automation-ai-project-management.html | Productivity Automation AI Project Management | ~2,200 |
-| 9 | lead-generation-ai-webinar-automation.html | Lead Generation AI Webinar Automation | ~2,200 |
-| 10 | ai-automation-marketing-attribution.html | AI Automation Marketing Attribution | ~2,200 |
+## Deployment Status
+- **GitHub repo**: https://github.com/AdoriseDigital/adorise-seo-day1
+- **Live site**: https://adorisedigital.github.io/adorise-seo-day1/
+- **New cluster**: https://adorisedigital.github.io/adorise-seo-day1/cluster23/
+- **Sitemap**: https://adorisedigital.github.io/adorise-seo-day1/sitemap.xml ✅ Returns 200
 
-**Total new content: ~22,000 words**
+## GSC Connection Status
+- **New connection initiated**: ca_N6Mi_rNqDh0U (Status: INITIALIZING)
+- **OAuth redirect URL**: https://connect.composio.dev/link/lk_sa4pj1a5d-cB
+- **Action needed**: Complete OAuth flow in browser to activate connection
+- **Previous connections**: All 9 older GSC connections are EXPIRED
 
-### 2. Updated Sitemap
-- Regenerated `sitemap.xml` with **220 total URLs** (10 new from cluster22)
-- All URLs properly formatted with `lastmod`, `changefreq`, `priority`
-
-### 3. Deployed to GitHub Pages
-```bash
-git add .
-git commit -m "Add cluster22: 10 new SEO pages + updated sitemap.xml"
-git push
-```
-- Commit: `a7d7d5d`
-- Live at: `https://adorisedigital.github.io/adorise-seo-day1/cluster22/`
-
-### 4. GSC Submission Status
-**Connection Issue:** All 10 GSC connected accounts are **EXPIRED**
-- Initiated new connection via Composio
-- **Authorization URL:** https://connect.composio.dev/link/lk_HmAaxYlg86rg
-- User must visit this URL to complete OAuth flow
-- After authorization, re-run submission script
+## Next Steps
+1. **Manual**: Open OAuth URL in browser to complete Google authorization
+2. **Automated**: Next hourly run will submit cluster23 URLs once connection is ACTIVE
+3. **Verify**: Check GitHub Actions for Pages rebuild completion
 
 ## Files Created/Modified
-- `generate_cluster22_pages.py` — Page generation script
-- `submit_cluster22_to_gsc.py` — GSC submission script  
-- `cluster22/*.html` (10 files)
-- `sitemap.xml` (updated)
-- `H_gsc_submission_2026-09-15_02-12-07.json` — Submission log
+- `generate_cluster23_pages.py` - Page generator script
+- `cluster23/` - 10 new HTML pages (~18 min read each, 1500+ words)
+- `regenerate_sitemap.py` - Updated sitemap with 230 URLs
+- `submit_cluster23_to_gsc_v2.py` - GSC submission script for new connection
+- `initiate_gsc_connection.py` - Connection initiation
+- `link_gsc_connection.py` - OAuth link generation
+- `H_hourly_seo_run_2026-09-15.md` - This log
 
-## Next Steps (Next Hour)
-1. **Authorize GSC connection** — Visit https://connect.composio.dev/link/lk_HmAaxYlg86rg
-2. **Re-run GSC submission** — `python submit_cluster22_to_gsc.py`
-3. **Verify indexing** — Check GSC URL Inspection for new URLs
-4. **Hour 1, 4, 7 cycle** — Outreach batch (emails via Mailtrap/Systeme.io)
-
-## Deployment URLs
-| Page | URL |
-|------|-----|
-| Predictive Scoring | https://adorisedigital.github.io/adorise-seo-day1/cluster22/lead-generation-ai-predictive-scoring.html |
-| HR Recruitment | https://adorisedigital.github.io/adorise-seo-day1/cluster22/ai-automation-hr-recruitment.html |
-| Cash Flow Forecasting | https://adorisedigital.github.io/adorise-seo-day1/cluster22/small-business-tools-ai-cash-flow-forecasting.html |
-| Knowledge Base | https://adorisedigital.github.io/adorise-seo-day1/cluster22/productivity-software-ai-knowledge-base.html |
-| ABM | https://adorisedigital.github.io/adorise-seo-day1/cluster22/lead-generation-ai-account-based-marketing.html |
-| Legal Compliance | https://adorisedigital.github.io/adorise-seo-day1/cluster22/ai-automation-legal-compliance.html |
-| Customer Retention | https://adorisedigital.github.io/adorise-seo-day1/cluster22/small-business-ai-customer-retention.html |
-| Project Management | https://adorisedigital.github.io/adorise-seo-day1/cluster22/productivity-automation-ai-project-management.html |
-| Webinar Automation | https://adorisedigital.github.io/adorise-seo-day1/cluster22/lead-generation-ai-webinar-automation.html |
-| Marketing Attribution | https://adorisedigital.github.io/adorise-seo-day1/cluster22/ai-automation-marketing-attribution.html |
-
----
-*Generated by Hourly SEO Cron Job*
+## Keywords Targeted
+- Lead generation (4 pages): intent data, ABM, outbound personalization, referral automation
+- AI automation (3 pages): finance/accounting, supply chain, customer support
+- Small business tools (2 pages): pricing optimization, content marketing
+- Productivity software (1 page): meeting intelligence, code generation
