@@ -10,6 +10,8 @@ if api_key and api_key.startswith('ghp_'):
 
 composio = Composio(api_key=api_key, toolkit_versions={'google_search_console': '20260806_00'})
 
-# Check available methods
-print('Methods on connected_accounts:')
-print([m for m in dir(composio.connected_accounts) if not m.startswith('_')])
+# Check link method
+import inspect
+print(inspect.signature(composio.connected_accounts.link))
+print()
+print(inspect.getdoc(composio.connected_accounts.link))
