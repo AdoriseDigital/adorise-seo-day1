@@ -1,0 +1,27 @@
+# Strict Security & Public Hygiene Policy for Public GitHub Pages Repository
+# Only public HTML, CSS, JS, public images, sitemap, and robots.txt are allowed.
+
+# Block all internal operational logs and Obsidian notes
+H_*
+*.md
+!README.md
+
+# Block all Python automation and test scripts
+*.py
+
+# Block all internal JSON logs and payloads (allow sitemap.json)
+*.json
+!sitemap.json
+
+# Block all environment files and credentials
+*.env*
+.env
+
+# Block python cache
+__pycache__/
+*.pyc
+
+# Block debug files
+debug_*
+test_*
+check_*
