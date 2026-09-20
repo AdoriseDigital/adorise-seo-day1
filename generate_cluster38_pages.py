@@ -1,0 +1,443 @@
+#!/usr/bin/env python3
+import os
+
+# Target keywords: lead generation, AI automation, small business tools, productivity software
+pages = [
+    {
+        "filename": "lead-generation-ai-intent-data.html",
+        "title": "Lead Generation with AI Intent Data: Identify Buyers Before They Search",
+        "description": "AI monitors 50,000+ intent signals across review sites, job boards, tech stacks, hiring patterns, content consumption. Flags accounts 90 days before active buying. Pipeline from intent data: +340%. Sales cycle: -42%. Zero cold guesswork.",
+        "keywords": "AI intent data, buyer intent signals, intent-based lead generation, predictive intent AI, sales intelligence intent data, account-based marketing intent, purchase intent prediction, B2B intent data, intent monitoring AI",
+        "main_keyword": "Lead Generation AI Intent Data",
+        "cluster": "cluster38",
+        "number": "001"
+    },
+    {
+        "filename": "ai-automation-customer-success.html",
+        "title": "AI Automation for Customer Success: Proactive Retention, Zero Churn Surprises",
+        "description": "AI analyzes usage patterns, support tickets, NPS, engagement, billing, feature adoption. Predicts churn 60 days out with 94% accuracy. Auto-triggers retention plays, escalates to CSMs, personalizes outreach. NRR: 108% -> 134%. Churn: -67%.",
+        "keywords": "AI customer success, customer retention AI, churn prediction AI, customer health scoring AI, proactive support AI, net revenue retention AI, customer success automation, expansion revenue AI, customer lifecycle AI",
+        "main_keyword": "AI Automation Customer Success",
+        "cluster": "cluster38",
+        "number": "002"
+    },
+    {
+        "filename": "small-business-ai-sales-forecasting.html",
+        "title": "Small Business AI Sales Forecasting: Accurate Predictions, No Spreadsheet Guessing",
+        "description": "AI models pipeline, seasonality, rep performance, market signals, competitor moves. Forecast accuracy: 52% -> 91%. Identifies at-risk deals, suggests actions, updates daily. Board reporting: auto-generated. Zero manual CRM cleanup.",
+        "keywords": "AI sales forecasting, sales prediction AI, revenue forecasting AI, pipeline forecasting AI, sales analytics AI, forecasting accuracy AI, CRM forecasting AI, sales planning AI, revenue intelligence AI",
+        "main_keyword": "Small Business AI Sales Forecasting",
+        "cluster": "cluster38",
+        "number": "003"
+    },
+    {
+        "filename": "productivity-ai-email-triage.html",
+        "title": "Productivity AI Email Triage: Inbox Zero Every Day, Automatically",
+        "description": "AI reads every email, categorizes, prioritizes, drafts replies, extracts tasks, unsubscribes spam, summarizes threads. Processing: 2.5 hrs/day -> 12 min/day. Important emails: never missed. Response time: 4.2 hrs -> 37 min.",
+        "keywords": "AI email triage, email automation AI, inbox management AI, email productivity AI, smart inbox AI, email summarization AI, auto-reply AI, email classification AI, communication AI",
+        "main_keyword": "Productivity AI Email Triage",
+        "cluster": "cluster38",
+        "number": "004"
+    },
+    {
+        "filename": "lead-generation-ai-event-intelligence.html",
+        "title": "Lead Generation with AI Event Intelligence: Turn Every Conference into Pipeline",
+        "description": "AI scans attendee lists, speaker topics, sponsor booths, social buzz, session content. Identifies high-fit prospects, auto-enriches, triggers personalized outreach pre/during/post event. Event ROI: 3.2x. Leads per event: 12 -> 147.",
+        "keywords": "AI event intelligence, event lead generation, conference lead capture AI, trade show automation AI, event marketing AI, attendee intelligence AI, event ROI optimization, B2B event leads AI, event follow-up AI",
+        "main_keyword": "Lead Generation AI Event Intelligence",
+        "cluster": "cluster38",
+        "number": "005"
+    },
+    {
+        "filename": "ai-automation-financial-operations.html",
+        "title": "AI Automation for Financial Operations: Close Faster, Error-Free, Audit-Ready",
+        "description": "AI reconciles transactions, categorizes expenses, flags anomalies, processes invoices, manages approvals, generates reports, predicts cash flow. Close time: 12 days -> 2 days. Errors: -97%. Audit prep: continuous. Zero manual journal entries.",
+        "keywords": "AI financial operations, finance automation AI, accounts payable AI, accounts receivable AI, financial close AI, expense management AI, cash flow forecasting AI, financial reporting AI, audit automation AI",
+        "main_keyword": "AI Automation Financial Operations",
+        "cluster": "cluster38",
+        "number": "006"
+    },
+    {
+        "filename": "small-business-ai-competitive-intelligence.html",
+        "title": "Small Business AI Competitive Intelligence: Track Every Move, Counter Every Threat",
+        "description": "AI monitors competitor pricing, launches, hiring, content, ads, reviews, partnerships, funding, tech stack changes. Real-time alerts, battle cards auto-generated, win/loss analysis. Competitive win rate: 34% -> 61%. Blind spots: eliminated.",
+        "keywords": "AI competitive intelligence, competitor analysis AI, market intelligence AI, competitive monitoring AI, battle cards AI, win-loss analysis AI, competitive pricing AI, market research AI, strategic intelligence AI",
+        "main_keyword": "Small Business AI Competitive Intelligence",
+        "cluster": "cluster38",
+        "number": "007"
+    },
+    {
+        "filename": "productivity-ai-knowledge-management.html",
+        "title": "Productivity AI Knowledge Management: Every Answer Instant, No Search Required",
+        "description": "AI ingests docs, wikis, calls, tickets, emails, Slack. Answers any question with citations, finds experts, identifies gaps, auto-updates. Search time: 8 min -> 12 sec. Knowledge reuse: 34% -> 89%. Onboarding: 3 weeks -> 3 days.",
+        "keywords": "AI knowledge management, knowledge base AI, enterprise search AI, internal wiki AI, knowledge discovery AI, information retrieval AI, organizational knowledge AI, AI-powered intranet, knowledge sharing AI",
+        "main_keyword": "Productivity AI Knowledge Management",
+        "cluster": "cluster38",
+        "number": "008"
+    },
+    {
+        "filename": "lead-generation-ai-account-based-marketing.html",
+        "title": "Lead Generation with AI Account-Based Marketing: One-to-One at Scale",
+        "description": "AI selects target accounts, maps buying committees, personalizes content per role, orchestrates multi-channel plays, measures engagement per stakeholder. Target account engagement: 12% -> 78%. Deal size: 2.8x. Sales cycles: -35%.",
+        "keywords": "AI account-based marketing, ABM AI, target account selection AI, buying committee mapping AI, personalized ABM AI, multi-channel ABM AI, account engagement scoring AI, B2B ABM automation, revenue ABM AI",
+        "main_keyword": "Lead Generation AI Account-Based Marketing",
+        "cluster": "cluster38",
+        "number": "009"
+    },
+    {
+        "filename": "ai-automation-hr-operations.html",
+        "title": "AI Automation for HR Operations: Hire Better, Onboard Faster, Retain Longer",
+        "description": "AI screens resumes, matches candidates, schedules interviews, generates offers, onboards employees, manages compliance, predicts flight risk, personalizes development. Time-to-hire: 42 days -> 18 days. Quality of hire: +44%. First-year retention: 91%.",
+        "keywords": "AI HR operations, recruitment automation AI, applicant tracking AI, onboarding automation AI, employee engagement AI, HR analytics AI, talent acquisition AI, workforce planning AI, HR compliance AI",
+        "main_keyword": "AI Automation HR Operations",
+        "cluster": "cluster38",
+        "number": "010"
+    }
+]
+
+template = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="dN7gXILcjahIKEVA-vzu-5bzGmnBvgmDYmlx1rxx0-8" />
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <meta name="keywords" content="{keywords}">
+    <meta name="author" content="Adorise Digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adorisedigital.github.io/adorise-seo-day1/{cluster}/{filename}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{description}">
+    <meta property="og:url" content="https://adorisedigital.github.io/adorise-seo-day1/{cluster}/{filename}">
+    <meta property="og:site_name" content="Adorise Digital">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{title}">
+    <meta name="twitter:description" content="{description}">
+
+    <style>
+        body {{ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }}
+        h1 {{ color: #1a1a2e; font-size: 2.2em; margin-bottom: 0.3em; line-height: 1.3; }}
+        h2 {{ color: #16213e; font-size: 1.6em; margin-top: 2.5em; margin-bottom: 1em; padding-bottom: 0.3em; border-bottom: 2px solid #e94560; }}
+        h3 {{ color: #0f3460; font-size: 1.3em; margin-top: 1.8em; margin-bottom: 0.8em; }}
+        p {{ margin-bottom: 1.2em; }}
+        a {{ color: #e94560; text-decoration: none; }}
+        a:hover {{ text-decoration: underline; }}
+        .internal-link {{ background: #f8f9fa; padding: 0.2em 0.4em; border-radius: 3px; }}
+        .cta-box {{ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 2.5em; border-radius: 12px; margin: 2.5em 0; text-align: center; }}
+        .cta-box h2 {{ color: #fff; border-color: #e94560; margin-top: 0; }}
+        .cta-button {{ display: inline-block; background: #e94560; color: white; padding: 1em 2.5em; border-radius: 50px; font-weight: bold; font-size: 1.1em; text-decoration: none; margin-top: 1em; }}
+        .cta-button:hover {{ background: #d63652; text-decoration: none; }}
+        .code {{ background: #f4f4f4; padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }}
+        .highlight-box {{ background: #fff3cd; border-left: 4px solid #ffc107; padding: 1.2em; margin: 1.5em 0; border-radius: 0 8px 8px 0; }}
+        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5em; margin: 2em 0; }}
+        .stat-card {{ background: #f8f9fa; padding: 1.5em; border-radius: 8px; text-align: center; border-top: 4px solid #e94560; }}
+        .stat-number {{ font-size: 2.5em; font-weight: bold; color: #e94560; }}
+        .stat-label {{ color: #666; margin-top: 0.5em; }}
+        ul, ol {{ margin-bottom: 1.2em; padding-left: 1.5em; }}
+        li {{ margin-bottom: 0.6em; }}
+        table {{ width: 100%; border-collapse: collapse; margin: 1.5em 0; }}
+        th, td {{ padding: 1em; text-align: left; border-bottom: 1px solid #eee; }}
+        th {{ background: #f8f9fa; font-weight: 600; }}
+        footer {{ margin-top: 4em; padding-top: 2em; border-top: 1px solid #eee; color: #888; font-size: 0.9em; text-align: center; }}
+        .toc {{ background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 2em 0; }}
+        .toc h3 {{ margin-top: 0; border: none; color: #1a1a2e; }}
+        .toc ul {{ list-style: none; padding-left: 0; }}
+        .toc li {{ margin: 0.5em 0; }}
+        .toc a {{ text-decoration: none; font-weight: 500; }}
+        .badge {{ background: #28a745; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-left: 10px; }}
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>{main_keyword}<span class="badge">SPECIAL20</span></h1>
+            <p style="color: #666; font-size: 1.1em;">Published: September 2025 | Updated: September 2025 | <span class="code">18 min read</span></p>
+        </header>
+
+        <nav class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#why-{anchor1}">Why {main_keyword} Matters Now</a></li>
+                <li><a href="#core-{anchor2}">5 Core Strategies</a></li>
+                <li><a href="#implementation">Implementation Roadmap: 30-Day Plan</a></li>
+                <li><a href="#tools-comparison">Tool Comparison & Selection</a></li>
+                <li><a href="#roi-measurement">Measuring ROI & Optimization</a></li>
+                <li><a href="#common-pitfalls">Common Pitfalls to Avoid</a></li>
+                <li><a href="#next-steps">Next Steps & Resources</a></li>
+            </ul>
+        </nav>
+
+        <section id="why-{anchor1}">
+            <h2>Why {main_keyword} Matters Now</h2>
+            <p>Small businesses lose an estimated <strong>$1.6 trillion annually</strong> due to inefficient processes and missed opportunities. According to recent industry data, companies that adopt AI-driven {main_keyword_lower} see <strong>3.2x better outcomes</strong> compared to manual approaches. Yet the average small business still relies on outdated methods.</p>
+
+            <p>This gap isn't due to lack of awareness--it's an <strong>implementation problem</strong>. Most small business owners know they need AI but don't know where to start. The <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/" class="internal-link">AI Automation Suite</a> solves this with pre-built workflows that integrate with your existing stack and deliver results in days, not months.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">3.2x</div>
+                    <div class="stat-label">Better outcomes with AI automation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">67%</div>
+                    <div class="stat-label">Reduction in operational costs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-label">Faster execution times</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Operations without human operators</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="core-{anchor2}">
+            <h2>5 Core {main_keyword} Strategies</h2>
+
+            <h3>1. Intelligent Automation & AI-Powered Workflows</h3>
+            <p>Traditional automation follows rigid rules. AI-powered {main_keyword_lower} adapts, learns, and optimizes in real-time. Tools like the <a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-tools-comparison.html" class="internal-link">AI Automation Suite's workflow engine</a> handle complex decision trees, exception handling, and continuous improvement automatically.</p>
+
+            <p><strong>Implementation:</strong> Start with one high-volume, repetitive process. Map every decision point. Replace static rules with AI that learns from outcomes. Measure, iterate, expand.</p>
+
+            <h3>2. Predictive Analytics & Smart Decision Making</h3>
+            <p>Stop reacting--start predicting. AI analyzes historical patterns, market signals, and behavioral data to forecast outcomes with 85%+ accuracy. The <a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-integration-guide.html" class="internal-link">integration guide</a> shows how to connect predictive models to your daily operations.</p>
+
+            <p><strong>Key metrics:</strong> Businesses using predictive {main_keyword_lower} see <strong>40% reduction</strong> in wasted effort and <strong>2.5x improvement</strong> in resource allocation.</p>
+
+            <h3>3. Conversational AI for Scale</h3>
+            <p>Modern AI chat handles complex interactions, qualifies opportunities, and routes to humans only when necessary. This isn't basic chatbot territory--it's genuine conversational intelligence that understands context, nuance, and intent.</p>
+
+            <div class="highlight-box">
+                <strong>Real example:</strong> A professional services firm deployed conversational AI for client intake. Results: 60% reduction in admin time, 45% increase in qualified consultations booked, and 24/7 availability without night staff.
+            </div>
+
+            <h3>4. Dynamic Personalization at Scale</h3>
+            <p>Generic experiences convert poorly. AI dynamically customizes every touchpoint--website content, email sequences, proposals, pricing--based on visitor behavior, firmographics, and intent signals. A manufacturing CEO sees ROI calculators. A marketing director sees campaign templates.</p>
+
+            <p>Tools like the <a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-tools-comparison.html" class="internal-link">AI Automation Suite's personalization engine</a> make this accessible without developers.</p>
+
+            <h3>5. Continuous Optimization Loop</h3>
+            <p>AI doesn't just execute--it improves. Every interaction feeds the model. Every outcome refines the prediction. Every conversion teaches the system. This compounding advantage means your {main_keyword_lower} gets better every single day without manual tuning.</p>
+        </section>
+
+        <section id="implementation">
+            <h2>Implementation Roadmap: 30-Day Plan</h2>
+
+            <h3>Week 1: Foundation & Audit</h3>
+            <ol>
+                <li><strong>Map current processes:</strong> Document every workflow from start to finish</li>
+                <li><strong>Identify highest-impact targets:</strong> Where does AI deliver the biggest ROI?</li>
+                <li><strong>Define success metrics:</strong> What does "working" look like for YOUR business?</li>
+                <li><strong>Audit tech stack:</strong> What integrates, what needs replacement, what's missing</li>
+            </ol>
+
+            <h3>Week 2: Quick Wins Deployment</h3>
+            <ol>
+                <li><strong>Deploy first AI workflow:</strong> Start with highest-volume, lowest-complexity process</li>
+                <li><strong>Set up monitoring:</strong> Track time saved, errors reduced, quality improved</li>
+                <li><strong>Create feedback loops:</strong> Human-in-the-loop for edge cases, full automation for routine</li>
+                <li><strong>Train team:</strong> 2-hour workshop on new workflows and oversight</li>
+            </ol>
+
+            <h3>Week 3: Scale & Integrate</h3>
+            <ol>
+                <li><strong>Connect adjacent workflows:</strong> Chain automations for end-to-end processes</li>
+                <li><strong>Add predictive layer:</strong> Enable forecasting and proactive alerts</li>
+                <li><strong>Personalize customer-facing touchpoints:</strong> Website, email, proposals</li>
+                <li><strong>Build internal dashboards:</strong> Real-time visibility for leadership</li>
+            </ol>
+
+            <h3>Week 4: Optimize & Institutionalize</h3>
+            <ol>
+                <li><strong>Review metrics against targets:</strong> Celebrate wins, diagnose gaps</li>
+                <li><strong>Document SOPs:</strong> Make AI operations repeatable and transferable</li>
+                <li><strong>Plan next quarter:</strong> Identify 3 new processes for automation</li>
+                <li><strong>Upskill team:</strong> Advanced prompting, workflow design, AI oversight</li>
+            </ol>
+        </section>
+
+        <section id="tools-comparison">
+            <h2>Tool Comparison & Selection</h2>
+            <p>Not all AI tools are created equal. Here's how the top options stack up for {main_keyword_lower}:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Best For</th>
+                        <th>Setup Time</th>
+                        <th>Learning Curve</th>
+                        <th>Starting Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AI Automation Suite</strong></td>
+                        <td>End-to-end business automation</td>
+                        <td>Hours</td>
+                        <td>Low</td>
+                        <td>$199/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Zapier + AI</td>
+                        <td>Simple integrations</td>
+                        <td>Minutes</td>
+                        <td>Low</td>
+                        <td>$29/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Make (Integromat)</td>
+                        <td>Complex visual workflows</td>
+                        <td>Hours</td>
+                        <td>Medium</td>
+                        <td>$9/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Custom AI Development</td>
+                        <td>Unique requirements</td>
+                        <td>Months</td>
+                        <td>High</td>
+                        <td>$50k+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Recommendation:</strong> For 90% of small businesses, the <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/" class="internal-link">AI Automation Suite</a> delivers the fastest time-to-value with pre-built templates for {main_keyword_lower} that work out of the box.</p>
+        </section>
+
+        <section id="roi-measurement">
+            <h2>Measuring ROI & Optimization</h2>
+            <p>You can't improve what you don't measure. Track these KPIs for {main_keyword_lower}:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Target</th>
+                        <th>Measurement Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Time saved per process</td>
+                        <td>>70% reduction</td>
+                        <td>Weekly</td>
+                    </tr>
+                    <tr>
+                        <td>Error rate</td>
+                        <td><5%</td>
+                        <td>Daily</td>
+                    </tr>
+                    <tr>
+                        <td>Cost per transaction</td>
+                        <td>>50% reduction</td>
+                        <td>Monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Team satisfaction</td>
+                        <td>>4.5/5</td>
+                        <td>Quarterly</td>
+                    </tr>
+                    <tr>
+                        <td>Revenue impact</td>
+                        <td>>3x investment</td>
+                        <td>Monthly</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>The <a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-tools-comparison.html" class="internal-link">AI Automation Suite dashboard</a> tracks all of these automatically with pre-built reports for stakeholders.</p>
+        </section>
+
+        <section id="common-pitfalls">
+            <h2>Common Pitfalls to Avoid</h2>
+
+            <h3>1. Automating Broken Processes</h3>
+            <p>AI amplifies whatever you feed it. Fix the process first, then automate. The <a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-integration-guide.html" class="internal-link">integration guide</a> includes a process audit checklist.</p>
+
+            <h3>2. No Human Oversight</h3>
+            <p>AI handles 95% of cases. The 5% edge cases need human judgment. Design escalation paths from day one.</p>
+
+            <h3>3. Ignoring Data Quality</h3>
+            <p>Garbage in, garbage out. Invest in data cleaning before deploying AI. The Suite includes data validation workflows.</p>
+
+            <h3>4. Set-and-Forget Mentality</h3>
+            <p>AI needs monitoring and retraining. Schedule monthly model reviews and quarterly strategy updates.</p>
+
+            <h3>5. Underestimating Change Management</h3>
+            <p>Team adoption determines success. Invest in training, communicate wins, make AI a teammate not a threat.</p>
+        </section>
+
+        <section id="next-steps">
+            <h2>Next Steps & Resources</h2>
+
+            <h3>Start Free Today</h3>
+            <p>Get the complete <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/" class="internal-link">AI Automation Suite</a> with 50+ pre-built workflows for {main_keyword_lower}, including:</p>
+            <ul>
+                <li>Ready-to-deploy automation templates</li>
+                <li>Integration connectors for 100+ tools</li>
+                <li>Real-time analytics dashboard</li>
+                <li>Team collaboration features</li>
+                <li>Priority support & onboarding</li>
+            </ul>
+
+            <div class="cta-box">
+                <h2>Claim Your SPECIAL20 Discount</h2>
+                <p>Use code <strong>SPECIAL20</strong> for 20% off your first year</p>
+                <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/" class="cta-button">Get AI Automation Suite Now</a>
+            </div>
+
+            <h3>Further Reading</h3>
+            <ul>
+                <li><a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-tools-comparison.html" class="internal-link">AI Workflow Automation Tools Comparison</a></li>
+                <li><a href="https://adorisedigital.github.io/adorise-seo-day1/cluster1/ai-workflow-automation-integration-guide.html" class="internal-link">AI Workflow Automation Integration Guide</a></li>
+                <li><a href="https://adorisedigital.github.io/adorise-seo-day1/cluster2/ai-automation-small-business-case-studies.html" class="internal-link">AI Automation Small Business Case Studies</a></li>
+            </ul>
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 Adorise Digital. All rights reserved. | <a href="https://adorisedigital.com">adorisedigital.com</a> | <a href="https://whop.com/adorise-digital-usa/ai-automation-suite-a7/">AI Automation Suite</a></p>
+    </footer>
+</body>
+</html>
+'''
+
+# Create cluster directory
+cluster_dir = r"C:\Users\HOME_PC\adorise-seo-day1\cluster38"
+os.makedirs(cluster_dir, exist_ok=True)
+
+# Generate pages
+for page in pages:
+    main_keyword_lower = page["main_keyword"].lower()
+    anchor1 = main_keyword_lower.replace(" ", "-").replace("&", "").replace(",", "")
+    anchor2 = main_keyword_lower.replace(" ", "-").replace("&", "").replace(",", "")
+    
+    content = template.format(
+        title=page["title"],
+        description=page["description"],
+        keywords=page["keywords"],
+        main_keyword=page["main_keyword"],
+        main_keyword_lower=main_keyword_lower,
+        cluster=page["cluster"],
+        filename=page["filename"],
+        anchor1=anchor1,
+        anchor2=anchor2
+    )
+    
+    filepath = os.path.join(cluster_dir, page["filename"])
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content)
+    
+    word_count = len(content.split())
+    print(f"Created: {page['filename']} ({word_count} words)")
+
+print("\nAll 10 pages generated for cluster38!")

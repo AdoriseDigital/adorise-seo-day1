@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Submit new cluster37 URLs to Google Search Console via Composio SDK using new active connection
+Submit new cluster38 URLs to Google Search Console via Composio SDK using new active connection
 """
 import os
 import json
@@ -14,18 +14,18 @@ print(f'Using API key: {api_key[:15]}...')
 
 composio = Composio(api_key=api_key, toolkit_versions={'google_search_console': '20260806_00'})
 
-# New cluster37 URLs to submit
+# New cluster38 URLs to submit
 new_urls = [
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/lead-generation-ai-predictive-scoring.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/ai-automation-supply-chain-optimization.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/small-business-ai-marketing-attribution.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/productivity-ai-document-processing.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/lead-generation-ai-outbound-personalization.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/ai-automation-quality-assurance.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/small-business-ai-pricing-optimization.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/productivity-ai-meeting-intelligence.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/lead-generation-ai-referral-automation.html",
-    "https://adorisedigital.github.io/adorise-seo-day1/cluster37/ai-automation-compliance-monitoring.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/lead-generation-ai-intent-data.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/ai-automation-customer-success.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/small-business-ai-sales-forecasting.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/productivity-ai-email-triage.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/lead-generation-ai-event-intelligence.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/ai-automation-financial-operations.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/small-business-ai-competitive-intelligence.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/productivity-ai-knowledge-management.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/lead-generation-ai-account-based-marketing.html",
+    "https://adorisedigital.github.io/adorise-seo-day1/cluster38/ai-automation-hr-operations.html",
 ]
 
 # Get connected accounts
@@ -79,7 +79,7 @@ log_file = f"{log_dir}/H_gsc_submission_{datetime.now().strftime('%Y-%m-%d_%H-%M
 with open(log_file, 'w') as f:
     json.dump({
         "timestamp": datetime.now().isoformat(),
-        "cluster": "cluster37",
+        "cluster": "cluster38",
         "urls_submitted": len(new_urls),
         "results": results
     }, f, indent=2)
