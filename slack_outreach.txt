@@ -1,0 +1,33 @@
+SLACK COMMUNITY OUTREACH - AI Voice & Social DFY Services
+
+TARGET COMMUNITIES:
+- "Small Business India" Slack group
+- "SaaS Founders" Slack channel
+- "Indian Entrepreneurs" Slack network
+- "Digital Marketing" Slack workspace
+
+OUTREACH MESSAGES (2 templates):
+
+Template 1 (Value-First, no pitch):
+"Hi [Name], I'm observing the challenges Indian small businesses face with customer calls and social media management. Many can't afford a full-time team but need 24x7 coverage. Our DFY service starts at just ₹199/month - here's what it includes: [BULLET POINTS]. No pressure, just sharing in case it helps!"
+
+Template 2 (Question-Based):
+"Hi [Name], quick question: Is your business currently handling customer calls manually, or do you have automation? If manual, you're probably losing opportunities after hours. We help businesses like yours implement AI voice agents + social media posting starting at ₹199/month. Happy to share more if interested!"
+
+SLACK ACTIONS:
+/outreach [name] [template] - Send to selected channel
+/listen [keyword] - Monitor channel for pain phrases
+/status - Show active outreach sessions
+
+KEYWORDS TO TRIGGER Auto-Reply:
+- "tired of calls"
+- "need social media help"
+- "no time for marketing"
+- "looking for automation"
+- "handling customer calls"
+- "social media posting"
+
+TRACKING:
+- Messages sent per channel
+- Replies received
+- Booked calls from Slack outreach

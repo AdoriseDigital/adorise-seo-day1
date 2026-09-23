@@ -1,0 +1,43 @@
+BREVO COLD EMAIL CAMPAIGN - US Home-Service DFY Services
+
+CONTACT SOURCES:
+- Systeme.io existing contacts (3 tagged "outreach") - David Basulto, Jules, Paul Cornel
+- New US home-service business list (to be built)
+- Target: Contracting, HVAC, Plumbing, Electrical, Landscaping businesses
+
+EMAIL 1 (Cold - Day 1):
+SUBJECT: "How many calls does [Company] lose after 6pm?"
+BODY: "Hi [Name], quick one — how many calls does [Company] lose after 6pm, on weekends, or while your crew's out on a job? For most home-service businesses we talk to, it's more than they'd like to admit.
+
+We run two done-for-you services built for businesses like yours:
+- An AI voice agent that answers every call, 24/7, books the appointment straight into your calendar, and even makes outbound follow-up calls — inbound and outbound both included, no per-minute overages.
+- Done-for-you social media — real content, video included, posted for you across Facebook, Instagram, and Google Business Profile every week.
+
+Bought separately from providers like Ruby, Smith.ai, or a marketing agency, this combination typically runs $1,470-$2,360/month. We run both together for $1,297/month, no long-term contract, cancel anytime.
+
+Worth a two-minute call to see if it fits [Company]?
+
+Just reply 'yes' and I'll send over the full details."
+
+EMAIL 2 (Brevo Sequence - Day 3):
+SUBJECT: "Still helping home-service businesses with AI + Social"
+BODY: "Hi [Name], following up on my previous message. Many home-service businesses we work with were losing 20-30% of calls before discovering our DFY service. Now they have: 24/7 AI voice agent never missing a call, Social media posting every week with videos, At $1,297/month vs $1,470-$2,360 elsewhere, No long-term contract, cancel anytime. Are you open to a quick 10-min chat about how this would work for [Company]? No pressure!"
+
+EMAIL 3 (Brevo Sequence - Day 7):
+SUBJECT: "Last chance: $1,297/month AI + Social for [Company]"
+BODY: "Hi [Name], this is the last email in this sequence. We're offering our combined AI voice agent + done-for-you social media service at $1,297/month - less than half what providers like Ruby or Smith.ai charge, with no long-term contract. If now isn't the right time for [Company], no worries! Just reply 'not interested' and we'll remove you from future emails. Otherwise, click here to book a 2-minute call: https://ghlbooking.adorisedigital.com/ai-services-page"
+
+=== BREVO CAMPAIGN SETTINGS ===
+API: brevo.com (free tier or paid)
+Sender: info@adorisedigital.com (verified domain)
+Daily send limit: 50 emails/day (free tier) or 300/day (paid)
+Tracking: Open + Click enabled
+A/B test: Subject lines
+Compliance: Double opt-in, unsubscribe link included
+List hygiene: Remove bounces/unsubscribes weekly
+
+=== CONTACT TRACKING ===
+- Tag: "adorise_us_dfy" in Brevo
+- Segment: Home-service businesses
+- Status: New → Contacted → Replied → Called → Closed
+- Revenue tracking: $1,297/month recurring per closed deal

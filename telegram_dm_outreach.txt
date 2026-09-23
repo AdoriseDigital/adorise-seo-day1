@@ -1,0 +1,40 @@
+TELEGRAM DM OUTREACH - AI Voice & Social DFY Services
+
+BOT CONFIGURATION:
+- Bot Token: (set up via @BotFather)
+- Chat ID: (your target chat ID)
+- Alert Keywords: Same as radar_keywords.txt
+
+OUTREACH MESSAGES (3 templates):
+
+Template 1 (Direct - Day 1):
+"Hi [Name], noticed you're asking about AI automation for your business. We help with 24x7 multilingual voice call agents + social media posting starting at ₹199/month. Need help with calls or social media? Reply yes or tell me your biggest challenge!"
+
+Template 2 (Value-First - Day 3):
+"Hi [Name], many small businesses were handling calls/social manually before our DFY service. We start at just ₹199/month with 24x7 support. Free up your time to focus on growth! Are you open to learning how?"
+
+Template 3 (Urgency - Day 7):
+"Hi [Name], final notice: ₹199/month AI voice + social DFY service. At this price, it's the most affordable automation for Indian businesses. If now isn't right, just reply 'pass' and we'll stop. Otherwise, book demo: [LINK]"
+
+TELEGRAM COMMAND STRUCTURE:
+/outreach [name] [message] - Send DM to named contact
+/status - Check bot status & last send
+/leads - Show radar leads found today
+
+PLATFORMS TO MONITOR (from radar_keywords.txt):
+- Telegram groups (digital entrepreneurs, Indian business)
+- Twitter/X DMs (mentions + direct)
+- Slack communities (SaaS, small business)
+- Discord servers (entrepreneurs, startups)
+
+INTEGRATION WITH RADAR:
+1. Radar finds post with pain phrase
+2. Bot auto-replies via Telegram/DM
+3. Lead tagged "adorise_interested" in Systeme.io
+4. Email sequence triggers (Brevo)
+5. AI voice call books appointment (if interested)
+
+TRACKING:
+- Opens (Telegram shows read status)
+- Replies counted
+- Booked calls logged

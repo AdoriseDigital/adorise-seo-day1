@@ -1,0 +1,52 @@
+AGGRESSIVE US OUTREACH VIA GHL DIRECT API
+
+TARGET: Home-service business owners/operators in USA
+PRICE: $1,297/month (AI voice agent + done-for-you social media)
+NO long-term contract, cancel anytime
+BOOKING: https://ghlbooking.adorisedigital.com/ai-services-page
+
+EMAIL 1 (IMMEDIATE - Day 1):
+"Hi [Name], quick one — how many calls does [Prospect Company] lose after 6pm, on weekends, or while your crew's out on a job? For most home-service businesses we talk to, it's more than they'd like to admit.
+
+We run two done-for-you services built for businesses like yours:
+- An AI voice agent that answers every call, 24/7, books the appointment straight into your calendar, and even makes outbound follow-up calls — inbound and outbound both included, no per-minute overages.
+- Done-for-you social media — real content, video included, posted for you across Facebook, Instagram, and Google Business Profile every week.
+
+Bought separately from providers like Ruby, Smith.ai, or a marketing agency, this combination typically runs $1,470-$2,360/month. We run both together for $1,297/month, no long-term contract, cancel anytime.
+
+Worth a two-minute call to see if it fits [Prospect Company]?
+
+Just reply 'yes' and I'll send over the full details."
+
+EMAIL 2 (Day 3 - Follow-up):
+"Hi [Name], following up on my previous message. Many home-service businesses we work with were losing 20-30% of calls before discovering our DFY service. Now they have: 24/7 AI voice agent never missing a call, Social media posting every week with videos, At $1,297/month vs $1,470-$2,360 elsewhere, No long-term contract, cancel anytime. Are you open to a quick 10-min chat about how this would work for [Prospect Company]? No pressure!"
+
+EMAIL 3 (Day 7 - Final):
+"Hi [Name], this is the last email in this sequence. We're offering our combined AI voice agent + done-for-you social media service at $1,297/month - less than half what providers like Ruby or Smith.ai charge, with no long-term contract. If now isn't the right time for [Prospect Company], no worries! Just reply 'not interested' and we'll remove you from future emails. Otherwise, click here to book a 2-minute call: https://ghlbooking.adorisedigital.com/ai-services-page"
+
+=== GHL DIRECT API SETTINGS ===
+API Connection: Direct (not Composio)
+Endpoint: https://locations.gohighlevel.com/api
+Auth: Direct Hermes GHL API key (already configured)
+Contacts: US home-service business owners
+Sequence: 3 emails over 7 days
+Booking URL: https://ghlbooking.adorisedigital.com/ai-services-page
+Calendar: https://ghlbooking.adorisedigital.com/ai-services-page
+
+=== SLACK INTEGRATION (Already Connected) ===
+- One Slack account already connected to Hermes
+- Can post aggressive outreach messages to target channels
+- Channel: #adorise-us-outreach or similar
+- Template messages ready
+
+=== BUFFER SOCIAL MEDIA ===
+- Ready for amplified outreach
+- Platforms: Facebook, Instagram, Google Business Profile
+- Content: Same DFY service promotion
+- Schedule: Parallel with email sequence
+
+=== AGGRESSIVE BLASST SETTINGS ===
+- Email send rate: 10 per hour (GHL direct API limit)
+- Slack messages: 5 per channel per hour
+- Buffer posts: 3 per day across social platforms
+- Follow-up calls: 5 per day from booked calls

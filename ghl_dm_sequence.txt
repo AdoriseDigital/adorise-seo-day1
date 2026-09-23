@@ -1,0 +1,35 @@
+GHL SOCIAL MEDIA DM SEQUENCE - Consent-Based Follow-Up
+
+CONTACT STATUS: Already interacted with GHL booking page or AI services page
+PERMISSION: Given - can send follow-up DMs via GHL API
+
+DM TEMPLATE 1 (Immediate - After Booking Page Visit):
+"Hi [Name], thanks for visiting our AI services page! We help home-service businesses like [Prospect Company] with 24/7 AI voice agents + done-for-you social media starting at $1,297/month (intro pricing). Normally $1,470-$2,360/month with other providers. No long-term contract, cancel anytime. Quick question: Are you currently handling customer calls 24/7, or do you miss calls after hours? Reply yes or tell me your biggest challenge!"
+
+DM TEMPLATE 2 (Day 3 - Follow-up):
+"Hi [Name], following up on my previous message. Many home-service businesses we work with were missing 20-30% of calls before our DFY service. Now they have 24/7 AI voice agent + social media posting every week at $1,297/month. Are you open to a quick 10-min chat about how this would work for [Prospect Company]? No pressure!"
+
+DM TEMPLATE 3 (Day 7 - Final):
+"Hi [Name], final notice: $1,297/month intro pricing for AI voice + social DFY service. At this price, it's the most affordable automation for home-service businesses. If now isn't right, just reply 'pass' and we'll stop. Otherwise, book demo: https://ghlbooking.adorisedigital.com/ai-services-page"
+
+=== GHL API SETTINGS (Direct, no Composio) ===
+Connection: Direct Hermes GHL API
+Endpoints:
+- Contacts: /contacts
+- Messages: /messages  
+- Booking: /bookings
+- Calendar: /calendars
+Auth: Direct API key (already configured in Hermes)
+Rate limit: 10� requests/minute
+
+=== SLACK INTEGRATION (Already Connected) ===
+- One Slack account connected to Hermes
+- Channel: #adorise-consent-followup
+- Can post DM follow-ups to Slack for manual outreach
+- Template messages ready to copy/paste
+
+=== BUFFER SOCIAL MEDIA AMPLIFICATION ===
+- Posts same DFY service promotion
+- Timing: Parallel with email/DM sequences
+- Platforms: Facebook, Instagram, Google Business Profile
+- Goal: Reinforce brand awareness during outreach campaign
