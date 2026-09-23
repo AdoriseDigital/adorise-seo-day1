@@ -1,0 +1,36 @@
+BREVO EMAIL SEQUENCE - AI VOICE & SOCIAL DFY SERVICES
+
+CONTACTS (from Systeme.io, tagged "outreach"):
+1. David Basulto - db@davidbasulto.com - iOgrapher
+   Pitch: "Quick question about your AI automation work"
+
+2. Jules - Jules@AiWizardsConsulting.com - AI Wizard Consulting
+   Pitch: "Draft your AI marketing"
+
+3. Paul Cornel - paul@aixpertus.io (email rejected earlier but we'll retry)
+
+EMAIL SEQUENCE (3 emails over 7 days):
+
+Email 1 (Day 1 - Immediately):
+SUBJECT: "Quick question about your AI automation work"
+BODY: "Hi [Name], I noticed you're working on AI automation. We help businesses like yours implement 24x7 multilingual voice call agents and social media posting starting at ₹199/month. Quick question: Are you currently handling customer calls manually, or do you have automation in place? Reply with 'YES' if interested, or just say hi!"
+
+Email 2 (Day 3 - Follow-up):
+SUBJECT: "Still helping businesses with AI automation"
+BODY: "Hi [Name], following up on my previous message. Many small businesses we work with were manually handling calls and social media before discovering our DFY service. We start at just ₹199/month with 24x7 multilingual support. Are you open to a quick 10-min chat about automating your calls/social? No pressure!"
+
+Email 3 (Day 7 - Final follow-up):
+SUBJECT: "Last chance: AI automation for ₹199/month"
+BODY: "Hi [Name], this is the last email in this sequence. We're offering our AI voice call agent + social media posting DFY service at ₹199/month - a fraction of what it costs to hire. If now isn't the right time, no worries! Just reply 'not interested' and we'll remove you from future emails. Otherwise, click here to book a 10-min demo: [CALENDLY LINK]"
+
+=== BREVO SETTINGS ===
+API Key: (your brevo key)
+Sender: (your verified domain)
+Tracking: Open + Click enabled
+Suppression: Unsubscribe link included
+Tags: "adorise_dfy", "outreach_india", "₹199_offer"
+
+=== SYSTEME.IO SYNC ===
+- 3 contacts already tagged "outreach"
+- Will sync to Brevo via API
+- Newsletter drafts ready (IDs: 5268935, 5268937)
